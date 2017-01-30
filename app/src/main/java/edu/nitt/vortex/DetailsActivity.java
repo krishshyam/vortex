@@ -264,4 +264,10 @@ public class DetailsActivity extends Activity {
         ((TextView)findViewById(R.id.title_details)).setText(labels[event_id]);
         ((TextView)findViewById(R.id.content_details)).setText(contentStrings[event_id]);
     }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.splash_in,R.anim.splash_out);
+    }
 }
