@@ -40,6 +40,7 @@ public class EventsActivity extends AppCompatActivity {
                 Intent toDetails=new Intent(getApplicationContext(),DetailsActivity.class);
                 toDetails.putExtra("event_id",position);
                 startActivity(toDetails);
+                overridePendingTransition(R.anim.splash_in,R.anim.splash_out);
             }
         });
 

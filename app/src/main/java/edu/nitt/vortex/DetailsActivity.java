@@ -1,6 +1,7 @@
 package edu.nitt.vortex;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Window;
@@ -257,7 +258,7 @@ public class DetailsActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#00000000")));
         setContentView(R.layout.activity_details);
         int event_id=getIntent().getIntExtra("event_id",0);
         ((TextView)findViewById(R.id.title_details)).setText(labels[event_id]);
