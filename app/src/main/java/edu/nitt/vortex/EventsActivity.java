@@ -39,7 +39,9 @@ public class EventsActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent toDetails=new Intent(getApplicationContext(),DetailsActivity.class);
                 toDetails.putExtra("event_id",position);
+                toDetails.putExtra("from_id",0);
                 startActivity(toDetails);
+
                 overridePendingTransition(R.anim.splash_in,R.anim.splash_out);
             }
         });

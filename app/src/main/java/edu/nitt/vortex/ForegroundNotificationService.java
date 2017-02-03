@@ -16,7 +16,7 @@ public class ForegroundNotificationService extends FirebaseMessagingService {
             super.onMessageReceived(remoteMessage);
             Log.d("msg", "onMessageReceived: " + remoteMessage.getData().get("message"));
             NotificationCompat.Builder builder = new  NotificationCompat.Builder(this)
-                    .setSmallIcon(R.mipmap.ic_launcher)
+                    .setSmallIcon(R.mipmap.logo)
                     .setContentTitle("Vortex")
                     .setContentText(remoteMessage.getNotification().getBody());
             NotificationManager manager = (NotificationManager)     getSystemService(NOTIFICATION_SERVICE);

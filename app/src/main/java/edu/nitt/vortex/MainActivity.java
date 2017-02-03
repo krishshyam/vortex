@@ -62,10 +62,19 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(new Intent(getApplicationContext(),EventsActivity.class));
                             break;
                         case 1:
+                            startActivity(new Intent(getApplicationContext(),WorkshopActivity.class));
                             break;
                         case 2:
+                            Intent about=new Intent(getApplicationContext(),DetailsActivity.class);
+                            about.putExtra("from_id",3);
+                            startActivity(about);
+                            overridePendingTransition(R.anim.splash_in,R.anim.splash_out);
                             break;
                         case 3:
+                            Intent contacts=new Intent(getApplicationContext(),DetailsActivity.class);
+                            contacts.putExtra("from_id",2);
+                            startActivity(contacts);
+                            overridePendingTransition(R.anim.splash_in,R.anim.splash_out);
                             break;
 
                     }
